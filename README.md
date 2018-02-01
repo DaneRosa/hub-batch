@@ -34,7 +34,7 @@ After you complete these two steps, you are ready to begin.
 
 ## Usage
 ```
-$ hub-batch
+$ ./app.js
 ```
 When you first run hub-batch in terminal, you will be asked to provide some authentication details. HubSpot’s APIs allow you to authenticate using a __HapiKey__ or __Access Token__. You will automatically asked to be add a new token if the existing token expires.
 
@@ -45,7 +45,7 @@ After this set up is complete, run `$ hub-batch` again to begin.
 ### Example
 From terminal, run:
 ```
-$ hub-batch
+$ ./app.js
 ```
 
 Using the arrow keys, walk through the options provided:
@@ -64,7 +64,7 @@ Use this option to __Get__ a CSV containing COS blog post/page data.
 
 From terminal, run:
 ```
-$ hub-batch
+$ ./app.js
 ```
 
 Using the arrow keys, select the following:
@@ -105,7 +105,7 @@ Use this option __Update__ the contents of COS blog post/page data. You will hav
 
 From terminal, run:
 ```
-$ hub-batch
+$ ./app.js
 ```
 
 Using the arrow keys, select the following:
@@ -120,7 +120,7 @@ Use this option to __Publish__ pages that have been updated or have unpublished 
 
 From terminal, run:
 ```
-$ hub-batch
+$ ./app.js
 ```
 
 Using the arrow keys, select the following:
@@ -134,7 +134,7 @@ Use this option to __Rollback__ published changes. This feature will revert any 
 
 From terminal, run:
 ```
-$ hub-batch
+$ ./app.js
 ```
 
 Using the arrow keys, select the following options:
