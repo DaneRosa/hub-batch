@@ -7,6 +7,7 @@ A library the utilizes HubSpot APIs for bulk updating COS content (Blog Posts an
 2. __Import__ post/page information to HubSpot from a CSV file
 3. __Update__ and __Publish__ live COS content
 4. __Rollback__ changes 1 revision _just in case_
+5. __Create__ new pages and posts
 
 This tool has been used by HubSpot to bulk update content, with over 1000 pages updated at once.
 
@@ -140,3 +141,17 @@ $ ./app.js
 Using the arrow keys, select the following options:
 - Content type: Blog Posts or Site Pages
 - Which file contains the content you'd like to rollback 1 version?: This will list any CSV file found in the Hub-Batch __Imports__ folder.
+
+### Post or Page Creation
+Use this option to __Create Pages and Posts__. This feature will create new post or page content objects
+
+From terminal, run:
+```
+$ ./app.js
+```
+
+Using the arrow keys, select the following options:
+- Content type: Blog Posts or Site Pages
+- Which file contains the content you'd use to create pages or posts
+If you are creating posts, you must include a content_group_id in the request payload to ensure the post is created in the desired blog. 
+If you are getting posts/pages from one portal, and creating them in another, do not forget to update the .env file with the destination portal authentication. 
