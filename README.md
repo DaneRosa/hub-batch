@@ -142,7 +142,7 @@ Using the arrow keys, select the following options:
 - Content type: Blog Posts or Site Pages
 - Which file contains the content you'd like to rollback 1 version?: This will list any CSV file found in the Hub-Batch __Imports__ folder.
 
-### Post or Page Creation
+### POST OR PAGE CREATION
 Use this option to __Create Pages and Posts__. This feature will create new post or page content objects
 
 From terminal, run:
