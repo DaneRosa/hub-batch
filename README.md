@@ -16,10 +16,6 @@ This tool has been used by HubSpot to bulk update content, with over 1000 pages 
 ### Prerequisite
 This tool requires node.js. [You can install Node here](https://nodejs.org/en/).
 
-### Installation
-```
-$ npm install -g hub-batch
-```
 ### Static IDs Setup
 This tool allows you to quickly filter your get requests by __blog groups__, __campaigns__, __topics__, __page name__ and/or __URL slug__. Since this information is unique to each HubSpot portal, you will need to populate the file `js/static/staticids.js` with your own IDs. Place any blog groups, campaigns or topics into that file, and they will automatically appear when using this tool.
 
