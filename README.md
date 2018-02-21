@@ -101,7 +101,7 @@ After selecting your options, hub-batch will create a CSV and place it in your e
 And that's just the default. You can customize the tool to output whichever properties you'd like (even custom modules!). Once you have the CSV, open the file in Google Sheets (Excel mangles special characters) and make any changes you see fit to any of the properties. Find/Replace can be really handy. This has been very useful when rebrand or making any other bulk changes to live content.
 
 ### UPDATE JSON, UPDATE BUFFER JSON, PUSH BUFFER JSON LIVE, PUBLISH ACTION
-Use this option __Update__ the contents of COS blog post/page data. You will have the ability to select a CSV to import. [An example import file can be found here](https://gist.github.com/c-stone/5800dc3eeca6f11591453b52195536ce).
+Use this option to __Update__ the contents of COS blog post/page data. You will have the ability to select a CSV to import. [An example import file can be found here](https://gist.github.com/c-stone/5800dc3eeca6f11591453b52195536ce).
 
 From terminal, run:
 ```
