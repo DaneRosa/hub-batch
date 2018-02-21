@@ -1,7 +1,6 @@
 # Hub-Batch
-###[![NPM](https://nodei.co/npm/hub-batch.png?downloads=true&stars=true)](https://nodei.co/npm/hub-batch/)
 
-A library the utilizes HubSpot APIs for bulk updating COS content (Blog Posts and Site Pages). Hub-Batch allows you to:
+A library that utilizes HubSpot APIs for bulk updating COS content (Blog Posts and Site Pages). Hub-Batch allows you to:
 
 1. __Export__ post/page information from HubSpot to a CSV file
 2. __Import__ post/page information to HubSpot from a CSV file
@@ -101,7 +100,7 @@ After selecting your options, hub-batch will create a CSV and place it in your e
 
 And that's just the default. You can customize the tool to output whichever properties you'd like (even custom modules!). Once you have the CSV, open the file in Google Sheets (Excel mangles special characters) and make any changes you see fit to any of the properties. Find/Replace can be really handy. This has been very useful when rebrand or making any other bulk changes to live content.
 
-### UPDATE
+### UPDATE JSON, UPDATE BUFFER JSON, PUSH BUFFER JSON LIVE, PUBLISH ACTION
 Use this option __Update__ the contents of COS blog post/page data. You will have the ability to select a CSV to import. [An example import file can be found here](https://gist.github.com/c-stone/5800dc3eeca6f11591453b52195536ce).
 
 From terminal, run:
@@ -114,21 +113,7 @@ Using the arrow keys, select the following:
 - Content type: Blog Posts or Site Pages
 - Which file would you like to import?: This will list any CSV file found in the Hub-Batch __Imports__ folder.
 
-After selecting the import file, Hub-Batch will begin updating each of the pages found in the CSV. __NOTE__ this will save the changes [in Buffer](http://developers.hubspot.com/docs/methods/pages/post_pages_page_id_publish_action), but will not push the changes live. To publish these changes, next use the PUBLISH option.
-
-### PUBLISH
-Use this option to __Publish__ pages that have been updated or have unpublished changes.
-
-From terminal, run:
-```
-$ ./app.js
-```
-
-Using the arrow keys, select the following:
-- Content type: Blog Posts or Site Pages
-- Which file would you like to import?: This will list any CSV file found in the Hub-Batch __Imports__ folder.
-
-After selecting the import file, Hub-Batch will begin publishing each of the pages found in the CSV.
+After selecting the import file, Hub-Batch will begin updating each of the pages found in the CSV. __NOTE__ make sure you understand the various options and ways of updating content
 
 ### ROLLBACK
 Use this option to __Rollback__ published changes. This feature will revert any included pages 1 version.
