@@ -6,6 +6,7 @@ var getUtils = require('./js/modules/getutils'),
     publishUtils = require('./js/modules/publishutils'),
     rollbackUtils = require('./js/modules/rollbackutils'),
     createPostUtils = require('./js/modules/postcreationutils'),
+    createUrlMappingUtils = require('./js/modules/urlmappingscreationutils'),
     cliUtils = require('./js/modules/cliutils'),
     setup = require('./js/modules/setuputils'),
     config = require('./js/static/config.json');
@@ -45,6 +46,9 @@ else if ( config.usersFolder ) {
         }
         else if ( method === 'Create Posts or Pages' ) {
           createPostUtils.makePostCreationRequest(answersObj);
+        }
+        else if ( method === 'Create URL Mappings' ) {
+          createUrlMappingUtils.makeUrlCreationRequest(answersObj);
         }
       });
     }
