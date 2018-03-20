@@ -7,6 +7,7 @@ var getUtils = require('./js/modules/getutils'),
     rollbackUtils = require('./js/modules/rollbackutils'),
     createPostUtils = require('./js/modules/postcreationutils'),
     createUrlMappingUtils = require('./js/modules/urlmappingscreationutils'),
+    udpateUrlMappingUtils = require('./js/modules/updateurlmappingsutils'),
     deleteUrlMappingUtils = require('./js/modules/deleteurlmappingsutils'),
     cliUtils = require('./js/modules/cliutils'),
     setup = require('./js/modules/setuputils'),
@@ -50,6 +51,9 @@ else if ( config.usersFolder ) {
         }
         else if ( method === 'Create URL Mappings' ) {
           createUrlMappingUtils.makeUrlCreationRequest(answersObj);
+        }
+        else if ( method === 'Update URL Mappings' ) {
+          udpateUrlMappingUtils.makeUpdateUrlMappingRequest(answersObj);
         }
         else if ( method === 'DELETE URL Mappings' ) {
           deleteUrlMappingUtils.deleteUrlMappingRequest(answersObj);
