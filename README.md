@@ -7,6 +7,7 @@ A library that utilizes HubSpot APIs for bulk updating COS content (Blog Posts a
 3. __Update__ and __Publish__ live COS content
 4. __Rollback__ changes 1 revision _just in case_
 5. __Create__ new pages and posts
+6. __Create, Delete, Update__ URL Mappings
 
 This tool has been used by HubSpot to bulk update content, with over 1000 pages updated at once.
 
@@ -136,3 +137,11 @@ Using the arrow keys, select the following options:
 - Which file contains the content you'd use to create pages or posts
 If you are creating posts, you must include a content_group_id in the request payload to ensure the post is created in the desired blog. 
 If you are getting posts/pages from one portal, and creating them in another, do not forget to update the .env file with the destination portal authentication. 
+
+### URL MAPPINGS CREATION, DELETION OR UPDATE
+Use this option to __Create, Delete or Update URL Mappings__.
+
+From terminal, run:
+```
+$ ./app.js
+``` 
