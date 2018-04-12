@@ -9,7 +9,7 @@ var getUtils = require('./js/modules/getutils'),
     createUrlMappingUtils = require('./js/modules/urlmappingscreationutils'),
     udpateUrlMappingUtils = require('./js/modules/updateurlmappingsutils'),
     deleteUrlMappingUtils = require('./js/modules/deleteurlmappingsutils'),
-    makePsiRequest = require('./js/modules/psirequestutils'),
+    makePsiRequestUtils = require('./js/modules/psirequestutils'),
     cliUtils = require('./js/modules/cliutils'),
     setup = require('./js/modules/setuputils'),
     config = require('./js/static/config.json');
@@ -60,7 +60,7 @@ else if ( config.usersFolder ) {
           deleteUrlMappingUtils.deleteUrlMappingRequest(answersObj);
         }
         else if ( method === 'psi' ) {
-          makePsiRequest.makePsiRequests(answersObj);
+          makePsiRequestUtils.makePsiRequests(answersObj);
         }
       });
     }
