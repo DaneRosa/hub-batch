@@ -29,16 +29,19 @@ module.exports = (function() {
       //   method: 'GET',
       //   url: 'https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=http%3A%2F%2F' + pageId + '&fields=id%2CruleGroups',
       // };
+
+      // begin mobile getOptions using &strategy=mobile
       var getOptions = {
         method: 'GET',
         url: 'https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=http%3A%2F%2F' + pageId + '&fields=id%2CruleGroups&strategy=mobile',
       };
+
       request(getOptions, function (error, response, body) {
           var parsedBody = JSON.parse(body);
           if (parsedBody.id) {
               console.log(parsedBody.id + ' Mobile PSI Score:,' + parsedBody.ruleGroups.SPEED.score);
           } else {
-            console.log('hmmmmm');
+            console.log('hmmmmm, Googles APIs are really painful, they did not grade' + pageId + 'for some reason');
           }
       });
   }
@@ -52,7 +55,7 @@ module.exports = (function() {
     async.eachLimit(batchedPagesObject, 1, function(collection, callback) {
         collection.forEach(rollbackContent);
         ++count;
-        setTimeout(callback, 23000);
+        setTimeout(callback, 23000); // Yes, Google rate limited me making requests quicker than this...
     },
     function(err) {
         if ( err ) { // if any of the file produced an error, error is printed
