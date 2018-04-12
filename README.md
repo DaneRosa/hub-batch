@@ -8,6 +8,7 @@ A library that utilizes HubSpot APIs for bulk updating COS content (Blog Posts a
 4. __Rollback__ changes 1 revision _just in case_
 5. __Create__ new pages and posts
 6. __Create, Delete, Update__ URL Mappings
+6. ...__Run URLs through PSI__
 
 This tool has been used by HubSpot to bulk update content, with over 1000 pages updated at once.
 
@@ -145,3 +146,13 @@ From terminal, run:
 ```
 $ ./app.js
 ``` 
+
+### RUN URLS THROUGH PSI
+Hit Googles https://www.googleapis.com/pagespeedonline/v4/runPagespeed api
+
+From terminal, run:
+```
+$ ./app.js
+``` 
+
+Run with &strategy=mobile for mobile scores

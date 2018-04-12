@@ -34,7 +34,7 @@ var cliUtils = {
         name: 'method',
         type: 'list',
         message: 'What type of operation would you like to perform?:',
-        choices: ['GET JSON', 'Update Buffer JSON', 'Push Buffer Live', 'Update Hard Object JSON', 'Publish Action', 'Rollback Hard Object JSON', 'Create Posts or Pages', 'Create URL Mappings', 'Update URL Mappings', 'DELETE URL Mappings' ] // , 'Push JSON'
+        choices: ['GET JSON', 'Update Buffer JSON', 'Push Buffer Live', 'Update Hard Object JSON', 'Publish Action', 'Rollback Hard Object JSON', 'Create Posts or Pages', 'Create URL Mappings', 'Update URL Mappings', 'DELETE URL Mappings', 'psi' ] // , 'Push JSON'
       },
         // Begin GET Options
         { // GET: If BLOG POSTS is selected
@@ -157,7 +157,7 @@ var cliUtils = {
         type: 'list',
         message: 'Which file contains the content you\'d like to rollback 1 version?:',
         choices: helpers.getFolders(importsFolder),
-        when: answers => (answers.method === 'Rollback Hard Object JSON')
+        when: answers => (answers.method === 'Rollback Hard Object JSON' || answers.method === 'psi')
       }
     ];
     // Ask user questions, then run a callback function
