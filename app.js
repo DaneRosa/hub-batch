@@ -11,6 +11,7 @@ var getUtils = require('./js/modules/getutils'),
     deleteUrlMappingUtils = require('./js/modules/deleteurlmappingsutils'),
     deleteFormsUtils = require('./js/modules/deleteformsutils'),
     makePsiRequestUtils = require('./js/modules/psirequestutils'),
+    restoreFilesUtils = require('./js/modules/restorefilesutils'),
     cliUtils = require('./js/modules/cliutils'),
     setup = require('./js/modules/setuputils'),
     config = require('./js/static/config.json');
@@ -65,6 +66,9 @@ else if ( config.usersFolder ) {
         }
         else if ( method === 'psi' ) {
           makePsiRequestUtils.makePsiRequests(answersObj);
+        }
+        else if ( method === 'RESTORE Files' ) {
+          restoreFilesUtils.makeRestoreFilesRequest(answersObj);
         }
       });
     }
