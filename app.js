@@ -11,9 +11,10 @@ var getUtils = require('./js/modules/getutils'),
     deleteUrlMappingUtils = require('./js/modules/deleteurlmappingsutils'),
     deleteFormsUtils = require('./js/modules/deleteformsutils'),
     makePsiRequestUtils = require('./js/modules/psirequestutils'),
-    restoreFilesUtils = require('./js/modules/restorefilesutils'),
     cliUtils = require('./js/modules/cliutils'),
     setup = require('./js/modules/setuputils'),
+    restoreFilesUtils = require('./js/modules/restorefilesutils'),
+    restoreFormsUtils = require('./js/modules/restoreformsutils'),
     config = require('./js/static/config.json');
 
 cliUtils.showFiglet();
@@ -69,6 +70,9 @@ else if ( config.usersFolder ) {
         }
         else if ( method === 'RESTORE Files' ) {
           restoreFilesUtils.makeRestoreFilesRequest(answersObj);
+        }
+        else if ( method === 'RESTORE Forms' ) {
+          restoreFormsUtils.makeRestoreFormsRequest(answersObj);
         }
       });
     }
