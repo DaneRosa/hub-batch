@@ -12,7 +12,7 @@ queryString,
 cosContentType;
 
 module.exports = (function() {
-    function deleteFormsRequest(answersObj) {
+    function deleteListsRequest(answersObj) {
         cosContentType = answersObj.contentType;
         queryString = buildUpdateQueryString(answersObj);
         csvFileName = importsFolder+ '/'+ 'form_to_delete.csv';
@@ -43,7 +43,7 @@ module.exports = (function() {
         // Format Request
         var options = {
             method: 'DELETE',
-            url: 'http://api.hubapi.com/forms/v2/forms/' + pageId,
+            url: 'https://api.hubapi.com/contacts/v1/lists/' + pageId,
             qs: queryString,
             headers: {
                 'cache-control': 'no-cache'
@@ -103,6 +103,6 @@ module.exports = (function() {
     }
 
     return {
-        deleteFormsRequest: deleteFormsRequest,
+        deleteListsRequest: deleteListsRequest,
     };
 })();
