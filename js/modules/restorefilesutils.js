@@ -106,4 +106,8 @@ module.exports = (function() {
   return {
     makeRestoreFilesRequest: makeRestoreFilesRequest,
   };
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> 69b79bbdea6cbfae061ce0c1fc4d0aeede84ff55
