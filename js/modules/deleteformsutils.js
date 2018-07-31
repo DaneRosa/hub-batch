@@ -97,7 +97,7 @@ module.exports = (function() {
                 } else {
                     reject(console.log("not working"));
                 }
-            });
+            }); 
             fs.createReadStream(csvFileName).pipe(csvConverter); //read from file
         });
     }
